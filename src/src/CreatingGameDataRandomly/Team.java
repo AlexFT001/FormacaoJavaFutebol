@@ -4,6 +4,10 @@ public class Team {
     private StringBuilder teamName;
     private Player[] players;
 
+    public Team(StringBuilder teamName){
+        this.teamName = teamName;
+        this.players = null;
+    }
     public Team(StringBuilder teamName, Player[] players){
 
         this.teamName = new StringBuilder(teamName);

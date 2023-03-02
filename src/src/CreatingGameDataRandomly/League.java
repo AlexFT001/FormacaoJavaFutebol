@@ -3,11 +3,12 @@ package CreatingGameDataRandomly;
 public class League {
     public static void main(String[] args) {
 
-        Team[] teams = creatTeams();
+        League league = new League();
+        Team[] teams = league.creatTeams();
 
         //player1.setPlayerName(new StringBuilder("Robert Service"));
 
-        Game game[] = creatGames(teams);
+        Game[] game = league.creatGames(teams);
 
         for (int index = 0; index < game[1-1].getAwayTeam().getPlayers().length; index++) {
             if(game[1-1].getAwayTeam().getPlayers()[index].getPlayerName().toString().contains("Sab")){
@@ -25,10 +26,16 @@ public class League {
         System.out.println("\n");
 
         game[0].getDescription();
+        System.out.println("\n");
+        game[1].getDescription();
+        System.out.println("\n");
+        game[2].getDescription();
+        System.out.println("\n");
+        game[3].getDescription();
 
     }
 
-    public static Team[] creatTeams(){
+    public  Team[] creatTeams(){
 
         Player player1 = new Player(new StringBuilder("George Eliot"));
         Player player2 = new Player(new StringBuilder("Graham Greene"));
@@ -53,9 +60,13 @@ public class League {
 
     }
 
-    public static Game[] creatGames(Team[] teams){
+    public  Game[] creatGames(Team[] teams){
 
         Game game1 = new Game(teams[2-1], teams[1-1]);
+        Game game2 = new Game(teams[1-1], teams[2-1]);
+        Game game3 = new Game(teams[2-1], teams[1-1]);
+        Game game4 = new Game(teams[1-1], teams[2-1]);
+
 
         /*int random = (int) (Math.random()*6);
 
@@ -68,8 +79,11 @@ public class League {
         game1.setGols(new Goal[]{goal1});*/
 
         game1.playGame();
+        game2.playGame();
+        game3.playGame(5);
+        game4.playGame();
 
-        Game[] games ={game1};
+        Game[] games ={game1, game2, game3, game4};
         return games;
     }
 
