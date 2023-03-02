@@ -24,7 +24,7 @@ public class League {
             System.out.println(nomes[nomes.length-1] + ", " + nomes[0]);
 
         }
-        System.out.println("\n");
+        System.out.println("\n\n");
 
         game[0].goalsList();
 
