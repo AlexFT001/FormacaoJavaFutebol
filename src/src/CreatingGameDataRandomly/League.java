@@ -1,7 +1,5 @@
 package CreatingGameDataRandomly;
 
-import Utility.GameUtilis;
-
 public class League {
     public static void main(String[] args) {
 
@@ -24,9 +22,9 @@ public class League {
             System.out.println(nomes[nomes.length-1] + ", " + nomes[0]);
 
         }
-        System.out.println("\n\n");
+        System.out.println("\n");
 
-        game[0].goalsList();
+        game[0].getDescription();
 
     }
 
@@ -69,7 +67,7 @@ public class League {
 
         game1.setGols(new Goal[]{goal1});*/
 
-        GameUtilis.addGamesGoals(game1);
+        game1.playGame();
 
         Game[] games ={game1};
         return games;
