@@ -56,7 +56,11 @@ public class League {
 
         Game game1 = new Game(teams[2-1], teams[1-1]);
 
-        Goal[] golos = new Goal[(int) (Math.random()*6)];
+        int random = (int) (Math.random()*6);
+
+        Goal[] golos = new Goal[random];
+
+        System.out.println(random);
 
         Goal goal1 = new Goal(teams[1-1], teams[1-1].getPlayers()[2-1], 55);
 
