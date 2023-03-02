@@ -34,4 +34,9 @@ public class Goal {
     public void setGameTime(double gameTime) {
         this.gameTime = gameTime;
     }
+
+    @Override
+    public String toString() {
+        return "Goal scored after " + gameTime + " mins by " + player + " of " + team;
+    }
 }

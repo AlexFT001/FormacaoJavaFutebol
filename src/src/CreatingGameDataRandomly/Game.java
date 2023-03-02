@@ -34,4 +34,10 @@ public class Game {
     public void setGols(Goal[] gols) {
         this.gols = gols;
     }
+
+    public  void goalsList(){
+        for (int index = 0; index < gols.length; index++) {
+            System.out.println(gols[index]);
+        }
+    }
 }

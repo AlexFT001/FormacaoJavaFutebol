@@ -1,5 +1,7 @@
 package CreatingGameDataRandomly;
 
+import Utility.GameUtilis;
+
 public class League {
     public static void main(String[] args) {
 
@@ -8,9 +10,6 @@ public class League {
         //player1.setPlayerName(new StringBuilder("Robert Service"));
 
         Game game[] = creatGames(teams);
-
-        System.out.println("Goal scored after " + game[1-1].getGols()[0].getGameTime() + " mins by " + game[1-1].getGols()[0].getPlayer() + " of " + game[1-1].getGols()[0].getTeam());
-
 
         for (int index = 0; index < game[1-1].getAwayTeam().getPlayers().length; index++) {
             if(game[1-1].getAwayTeam().getPlayers()[index].getPlayerName().toString().contains("Sab")){
@@ -25,6 +24,10 @@ public class League {
             System.out.println(nomes[nomes.length-1] + ", " + nomes[0]);
 
         }
+        System.out.println("\n");
+
+        game[0].goalsList();
+
     }
 
     public static Team[] creatTeams(){
@@ -56,7 +59,7 @@ public class League {
 
         Game game1 = new Game(teams[2-1], teams[1-1]);
 
-        int random = (int) (Math.random()*6);
+        /*int random = (int) (Math.random()*6);
 
         Goal[] golos = new Goal[random];
 
@@ -64,7 +67,9 @@ public class League {
 
         Goal goal1 = new Goal(teams[1-1], teams[1-1].getPlayers()[2-1], 55);
 
-        game1.setGols(new Goal[]{goal1});
+        game1.setGols(new Goal[]{goal1});*/
+
+        GameUtilis.addGamesGoals(game1);
 
         Game[] games ={game1};
         return games;
