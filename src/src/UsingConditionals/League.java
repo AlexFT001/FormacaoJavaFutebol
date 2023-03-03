@@ -1,4 +1,4 @@
-package CreatingGameDataRandomly;
+package UsingConditionals;
 
 public class League {
 
@@ -37,6 +37,9 @@ public class League {
         game[2].getDescription();
         System.out.println("\n");
         game[3].getDescription();
+
+        System.out.println("\n");
+        league.showBestTeam(teams);
 
     }
 
@@ -90,6 +93,26 @@ public class League {
 
         Game[] games ={game1, game2, game3, game4};
         return games;
+    }
+
+    public void showBestTeam(Team[] teams){
+        System.out.println("Team Points");
+        System.out.println(teams[0].getTeamName() + ":" + teams[0].getTotalPoints() + ":" + teams[0].getGoals());
+        System.out.println(teams[1].getTeamName() + ":" + teams[1].getTotalPoints() + ":" + teams[1].getGoals());
+
+        if(teams[0].getTotalPoints() > teams[1].getTotalPoints()){
+            System.out.println("Winner: " + teams[0].getTeamName());
+        } else if (teams[1].getTotalPoints() > teams[0].getTotalPoints()) {
+            System.out.println("Winner: " + teams[1].getTeamName());
+        } else {
+            if(teams[0].getGoals() > teams[1].getGoals()){
+                System.out.println("Winner: " + teams[0].getTeamName());
+            } else if (teams[1].getGoals() > teams[0].getGoals()) {
+                System.out.println("Winner: " + teams[1].getTeamName());
+            } else {
+                System.out.println("TIE!!!");
+            }
+        }
     }
 
 }
