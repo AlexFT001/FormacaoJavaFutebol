@@ -4,7 +4,7 @@ import java.sql.Array;
 import java.util.StringTokenizer;
 
 public class PlayerDatabase {
-    private Player[] players;
+    private Player[] players = new  Player[10];
     private static  String nomes = "George Eliot, Graham Greene, Geoffrey Chaucer, Robert Service, Robbie Burns, Rafael Sabatini";
 
     public PlayerDatabase(){

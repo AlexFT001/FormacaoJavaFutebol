@@ -45,12 +45,16 @@ public class League {
 
     public  Team[] creatTeams(){
 
-        Player player1 = new Player(new StringBuilder("George Eliot"));
+        /*Player player1 = new Player(new StringBuilder("George Eliot"));
         Player player2 = new Player(new StringBuilder("Graham Greene"));
-        Player player3 = new Player(new StringBuilder("Geoffrey Chaucer"));
+        Player player3 = new Player(new StringBuilder("Geoffrey Chaucer"));*/
 
 
-        Player[] players ={player1,player2,player3};
+        //Player[] players ={player1,player2,player3};
+
+        PlayerDatabase data = new PlayerDatabase();
+        
+        Player[] players = data.getTeam(3);
 
         Team team1 = new Team(new StringBuilder("The Greens"), players);
 
